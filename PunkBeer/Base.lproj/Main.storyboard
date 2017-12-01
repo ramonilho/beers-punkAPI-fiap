@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MaZ-VO-b3N">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Lista de Cervejas-->
+        <scene sceneID="e3c-ea-DUf">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="rmI-TV-KlQ" customClass="BeersTableViewController" customModule="PunkBeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DS-68-JXE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beerCell" rowHeight="150" id="WEg-sq-TxA" customClass="BeerTableViewCell" customModule="PunkBeer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WEg-sq-TxA" id="Dew-6U-KHi">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-rh-dyH">
+                                            <rect key="frame" x="16" y="11" width="91" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="91" id="Drm-46-2bF"/>
+                                                <constraint firstAttribute="height" constant="128" id="irK-kz-RfE"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmZ-7I-GCT">
+                                            <rect key="frame" x="115" y="11" width="244" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abv: 0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKs-V4-uAT">
+                                            <rect key="frame" x="115" y="118" width="244" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="YND-g4-Xxg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MKs-V4-uAT" firstAttribute="leading" secondItem="ikO-rh-dyH" secondAttribute="trailing" constant="8" id="EVg-Yl-FQe"/>
+                                        <constraint firstItem="MKs-V4-uAT" firstAttribute="bottom" secondItem="Dew-6U-KHi" secondAttribute="bottomMargin" id="Jhf-LS-Bac"/>
+                                        <constraint firstItem="ikO-rh-dyH" firstAttribute="leading" secondItem="Dew-6U-KHi" secondAttribute="leadingMargin" id="Jxz-9U-Ic0"/>
+                                        <constraint firstItem="MKs-V4-uAT" firstAttribute="trailing" secondItem="Dew-6U-KHi" secondAttribute="trailingMargin" id="M0g-yZ-f4d"/>
+                                        <constraint firstItem="MKs-V4-uAT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pmZ-7I-GCT" secondAttribute="bottom" constant="8" id="McI-Bb-KoQ"/>
+                                        <constraint firstItem="ikO-rh-dyH" firstAttribute="bottom" secondItem="Dew-6U-KHi" secondAttribute="bottomMargin" id="Nao-Dm-lGK"/>
+                                        <constraint firstItem="ikO-rh-dyH" firstAttribute="top" secondItem="Dew-6U-KHi" secondAttribute="topMargin" id="Toh-va-Tfv"/>
+                                        <constraint firstItem="pmZ-7I-GCT" firstAttribute="leading" secondItem="ikO-rh-dyH" secondAttribute="trailing" constant="8" id="c8c-0a-EHr"/>
+                                        <constraint firstItem="pmZ-7I-GCT" firstAttribute="top" secondItem="Dew-6U-KHi" secondAttribute="topMargin" id="tnV-Wt-Roq"/>
+                                        <constraint firstItem="pmZ-7I-GCT" firstAttribute="trailing" secondItem="Dew-6U-KHi" secondAttribute="trailingMargin" id="viM-Ib-UjR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="alcoholLabel" destination="MKs-V4-uAT" id="57H-g3-Iyp"/>
+                                    <outlet property="nameLabel" destination="pmZ-7I-GCT" id="Qeb-Yv-Tgv"/>
+                                    <outlet property="photoImageView" destination="ikO-rh-dyH" id="pVv-6D-Wrb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rmI-TV-KlQ" id="EQP-6p-k7u"/>
+                            <outlet property="delegate" destination="rmI-TV-KlQ" id="HV4-F7-SGC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lista de Cervejas" id="8ja-Ni-9wR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWR-py-fDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-343.19999999999999" y="200.14992503748127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pFR-5p-fo2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MaZ-VO-b3N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MjY-km-XJh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rmI-TV-KlQ" kind="relationship" relationship="rootViewController" id="BJJ-5U-SUJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTb-d4-ole" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-986" y="200"/>
         </scene>
     </scenes>
 </document>
