@@ -54,4 +54,21 @@ class BeersTableViewController: UITableViewController {
         return UITableViewAutomaticDimension
     }
     
+    // MARK: Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "showDetail", sender: beerList[indexPath.row])
+        
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let beer = sender as? Beer {
+                let detailVC = segue.destination as! BeerDetailViewController
+                detailVC.beer = beer
+            }
+        }
+    }
+    
 }

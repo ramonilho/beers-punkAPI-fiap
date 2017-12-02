@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186D58351FD0D17A00FFC3E9 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D58341FD0D17A00FFC3E9 /* BeerTableViewCell.swift */; };
+		186D58371FD0E5FA00FFC3E9 /* BeerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D58361FD0E5FA00FFC3E9 /* BeerDetailViewController.swift */; };
 		18B6820B1FD0BC86009D1058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B6820A1FD0BC86009D1058 /* AppDelegate.swift */; };
 		18B682101FD0BC86009D1058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B6820E1FD0BC86009D1058 /* Main.storyboard */; };
 		18B682121FD0BC86009D1058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B682111FD0BC86009D1058 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		073EEC7B26CFF0EB2A44F57E /* Pods-PunkBeer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PunkBeer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PunkBeer/Pods-PunkBeer.debug.xcconfig"; sourceTree = "<group>"; };
 		186D58341FD0D17A00FFC3E9 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
+		186D58361FD0E5FA00FFC3E9 /* BeerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewController.swift; sourceTree = "<group>"; };
 		18B682071FD0BC86009D1058 /* PunkBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunkBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B6820A1FD0BC86009D1058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B6820F1FD0BC86009D1058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				18B682231FD0C522009D1058 /* BeersTableViewController.swift */,
 				186D58341FD0D17A00FFC3E9 /* BeerTableViewCell.swift */,
+				186D58361FD0E5FA00FFC3E9 /* BeerDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B6821D1FD0BE36009D1058 /* PunkAPI.swift in Sources */,
+				186D58371FD0E5FA00FFC3E9 /* BeerDetailViewController.swift in Sources */,
 				18B682241FD0C522009D1058 /* BeersTableViewController.swift in Sources */,
 				18B6820B1FD0BC86009D1058 /* AppDelegate.swift in Sources */,
 				18B682211FD0C074009D1058 /* Beer.swift in Sources */,
